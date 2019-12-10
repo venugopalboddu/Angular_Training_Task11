@@ -1,0 +1,31 @@
+<div class="container" style="margin-top: 100px">
+  <div class="row"> 
+        <div class="col-md-8 offset-md-2">  
+<h4>Drag and drop the image from the local system to input text box </h4><hr/><br/>
+<div class="upload" style="margin-left: 160px">
+  <form>
+    <label class="uploader" ondragover="return false;"
+    [class.loaded]="loaded" 
+    [style.outlineColor]="dragging ? activeColor : baseColor"
+    (dragenter)="handleDragEnter()"
+    (dragleave)="handleDragLeave()"
+    (drop)="handleDrop($event)">
+    
+    <i class="icon icon-upload glyphicon glyphicon-upload" 
+        [style.color]="dragging 
+            ? ((imageSrc.length > 0) ? overlayColor : activeColor)
+            : ((imageSrc.length > 0) ? overlayColor : baseColor)"></i>
+    
+    <img 
+        [src]="imageSrc" 
+        (load)="handleImageLoad()" 
+        [class.loaded]="imageLoaded"/>
+    
+    <input type="file" name="file" accept="image/*"
+        (change)="handleInputChange($event)">
+</label>
+  </form>
+</div>
+</div>
+</div>
+</div>
