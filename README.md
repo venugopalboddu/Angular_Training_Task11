@@ -1,4 +1,4 @@
-# Http
+# Drag and drop the image from the local system to input text box
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
